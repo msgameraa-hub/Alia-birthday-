@@ -55,5 +55,10 @@ button{font:inherit}.hero{min-height:100svh;display:grid;place-items:center;text
 const symbols=['♡','♥','✿','✧','✨'];
 function sprinkle(n=28){for(let i=0;i<n;i++){const el=document.createElement('span');el.className='float';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+'vw';el.style.fontSize=(14+Math.random()*20)+'px';el.style.color=['#e95d94','#f4a7c4','#c94d7c','#d8a3d5'][Math.floor(Math.random()*4)];el.style.animationDuration=(3+Math.random()*4)+'s';el.style.opacity=.45+Math.random()*.5;document.body.appendChild(el);setTimeout(()=>el.remove(),7200)}}
 window.addEventListener('load',()=>sprinkle(24));document.getElementById('wish').addEventListener('click',()=>{document.getElementById('wishText').classList.remove('hidden');document.getElementById('wishText').classList.add('reveal');sprinkle(65);document.getElementById('wish').textContent='Birthday magic unlocked! 💖';});
+
+ <audio id="bgMusic" loop>
+    <source src="1.mp3" type="audio/mpeg">
+</audio>
+
 </script>
 </body></html>
